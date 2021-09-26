@@ -1,105 +1,31 @@
 * {
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 /* Con este estilo podemos hacer responsiva nuestra imagen, es decir, que mantendra una relacion de aspecto dependiendo de la ventana del dispositivo donde estamos viendo nuestro archivo */
 img {
-    width: 100%;
+  width: 100%;
 }
 /* estilos al contenedor. con esto podemos centralizar y separa nuestro contenido de los bordes de la ventana */
 .contenedor {
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
+  width: 95vw;
+  max-width: 562px;
+  margin: 0 auto;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.panel {
-    background-color: #E4C3AC;
-    border-radius: 10px;
-    border-top: 0 px;
-}
-
-.panel-heading {
-    background-color: #A07352;
-    text-align: center;
-    font-size: 30px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.panel-body {
-    background-color: #E4C3AC;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    text-align: left;
-    padding-left: 50px;
-}
-
-footer {
-    background-color: #815230;
-    color: white;
-    font-size: 12px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-}
-
-label {
-
-    font-size: 20px;
-}
-
-input {
-    width: 50%;
-    border-radius: 5px;
-    background-color: lightgrey;
-    display:block; 
-    margin-bottom:5px;
-}
-
-
 
 /* Media QUery para disminuir el contenedor cuando la pantalla no mida mas de 560 px */
-@media screen and (max-width: 560px) {
-    .contenedor {
-        width: 95%;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-}
-/* Estilos para el boton */
-.boton-registro {
-    padding: 0.4rem;
-    transition: all 0.5s ease;
-    background-color: greenyellow;
-    border: 0;
-    border-radius: 0.25rem;
-}
-/* Estilo para cuando el mouse este sobre el boton */
-.boton-registro:hover {
-    background-color: rgb(124, 233, 35);
-    transform: scale(1.2);
-}
-/* Media QUery para agrandar letra del boton cuando la pantalla tenga un ancho minimo de 568 px */
-@media screen and (min-width: 568px) {
-    .boton-registro {
-        font-weight: bold;
-        font-size: 1.3rem;
-    }
+@media screen and (min-width: 760px) {
+  .contenedor {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 /* estilos para el link, quitamos el subrayado y cambiamos el color de texto */
-a {
-    text-decoration: none;
-    color: rgb(73, 71, 71);
-}
-
-
