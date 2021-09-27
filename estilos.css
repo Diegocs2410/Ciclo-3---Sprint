@@ -1,24 +1,70 @@
+:root {
+  /* Variantes de colores primarios*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* Color principal*/
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* Colores ligeros */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* Gris para parrafos*/
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+/* Selector Universal */
 * {
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: var(--clr-grey-10);
+}
 /* Con este estilo podemos hacer responsiva nuestra imagen, es decir, que mantendra una relacion de aspecto dependiendo de la ventana del dispositivo donde estamos viendo nuestro archivo */
 img {
   width: 100%;
+  border: 0;
 }
 /* estilos al contenedor. con esto podemos centralizar y separa nuestro contenido de los bordes de la ventana */
 .contenedor {
   width: 95vw;
-  max-width: 562px;
+  max-width: 762px;
   margin: 0 auto;
 }
+ol,
+ul,
+li {
+  list-style: none;
+}
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+:focus {
+  outline: none;
 }
 
 /* Media QUery para disminuir el contenedor cuando la pantalla no mida mas de 560 px */
@@ -28,4 +74,36 @@ img {
     margin: 0 auto;
   }
 }
-/* estilos para el link, quitamos el subrayado y cambiamos el color de texto */
+/* EStilos para el header */
+
+.header {
+  height: 65vh;
+}
+/* Realizamos el overlay al header para combinar un poco los colores */
+header::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgba(9, 9, 121, 0.3) 35%, rgba(0, 212, 255, 0.3) 98%);
+}
+.bg-nav {
+  background-color: var(--clr-grey-10) !important;
+}
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Estilos para el formulario */
+.formulario {
+  width: 560px;
+  box-shadow: var(--dark-shadow);
+  border-radius: var(--radius);
+}
